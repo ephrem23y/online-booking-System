@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethiopia BookStore - Quick Access</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        .link-btn {
+            display: block;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            font-weight: 600;
+        }
+        .link-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+        }
+        .link-btn.secondary {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .link-btn.success {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+        }
+        .credentials {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .credentials h3 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .credentials p {
+            margin: 5px 0;
+            color: #555;
+        }
+        .credentials strong {
+            color: #667eea;
+        }
+        .icon {
+            margin-right: 8px;
+        }
+        .alert {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            color: #856404;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .contact p {
+            margin: 5px 0;
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🇪🇹 Ethiopia BookStore</h1>
+        <p class="subtitle">Complete E-Commerce Book Store Application</p>
+        
+        <div class="alert">
+            <strong>⚠️ First Time Setup:</strong> If you haven't set up the database yet, click "Database Setup" below first!
+        </div>
+        
+        <!-- Setup Section -->
+        <div class="section">
+            <h2>🔧 Setup & Installation</h2>
+            <div class="links">
+                <a href="setup.php" class="link-btn secondary">
+                    <span class="icon">⚙️</span> Database Setup
+                </a>
+                <a href="add_ethiopian_books.php" class="link-btn success">
+                    <span class="icon">📚</span> Add Ethiopian Books
+                </a>
+                <a href="test_database.php" class="link-btn success">
+                    <span class="icon">🔍</span> Test Database
+                </a>
+                <a href="test_admin_functionality.php" class="link-btn success">
+                    <span class="icon">✅</span> Test Admin Functions
+                </a>
+                <a href="fix_admin_login.php" class="link-btn secondary">
+                    <span class="icon">🔧</span> Fix Admin Login
+                </a>
+                <a href="http://localhost/phpmyadmin" target="_blank" class="link-btn secondary">
+                    <span class="icon">🗄️</span> phpMyAdmin
+                </a>
+            </div>
+        </div>
+        
+        <!-- Main Access -->
+        <div class="section">
+            <h2>🏠 Main Application</h2>
+            <div class="links">
+                <a href="index.php" class="link-btn">
+                    <span class="icon">📚</span> Homepage
+                </a>
+                <a href="student/register.php" class="link-btn success">
+                    <span class="icon">✍️</span> Student Register
+                </a>
+                <a href="student/login.php" class="link-btn">
+                    <span class="icon">🔐</span> Student Login
+                </a>
+            </div>
+        </div>
+        
+        <!-- Admin Section -->
+        <div class="section">
+            <h2>👨‍💼 Admin Panel</h2>
+            <div class="links">
+                <a href="admin/login.php" class="link-btn secondary">
+                    <span class="icon">🛡️</span> Admin Login
+                </a>
+                <a href="admin/dashboard.php" class="link-btn secondary">
+                    <span class="icon">📊</span> Admin Dashboard
+                </a>
+            </div>
+            
+            <div class="credentials">
+                <h3>🔑 Admin Credentials</h3>
+                <p><strong>Username:</strong> admin</p>
+                <p><strong>Password:</strong> admin123</p>
+            </div>
+        </div>
+        
+        <!-- Features -->
+        <div class="section">
+            <h2>✨ Key Features</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                    <strong style="color: #667eea;">👥 Student Features:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px; color: #555;">
+                        <li>Register & Login</li>
+                        <li>Browse & Search Books</li>
+                        <li>Filter by Category & Price</li>
+                        <li>Shopping Cart</li>
+                        <li>Place Orders</li>
+                        <li>Track Shipping</li>
+                    </ul>
+                </div>
+                <div style="background: #f8f9fa; padding: 15px; border-radius: 10px;">
+                    <strong style="color: #f5576c;">🛠️ Admin Features:</strong>
+                    <ul style="margin-top: 10px; padding-left: 20px; color: #555;">
+                        <li>Manage Products</li>
+                        <li>Upload Book Images</li>
+                        <li>Manage Orders</li>
+                        <li>Update Order Status</li>
+                        <li>Track Shipping</li>
+                        <li>View Statistics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Contact -->
+        <div class="contact">
+            <p><strong>📧 Email:</strong> ephremyechale21@gmail.com</p>
+            <p><strong>📱 Phone:</strong> +251 987 112 092</p>
+        </div>
+    </div>
+</body>
+</html>
